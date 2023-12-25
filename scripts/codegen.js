@@ -8,16 +8,16 @@ const contracts = [
 		dir: join(contractsDir, "cw20-base")
 	},
 	{
-		name: "HopersStaking",
-		dir: join(contractsDir, "hopers-staking")
+		name: "RotoStaking",
+		dir: join(contractsDir, "roto-staking")
 	},
 	{
-		name: "HopersSwapHopers",
-		dir: join(contractsDir, "hopers-swap_hopers")
+		name: "RotoSwapRoto",
+		dir: join(contractsDir, "roto-swap_roto")
 	},
 	{
-		name: "HopersSwapOthers",
-		dir: join(contractsDir, "hopers-swap_orders")
+		name: "RotoSwapOthers",
+		dir: join(contractsDir, "roto-swap_orders")
 	}
 ]
 

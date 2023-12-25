@@ -7,29 +7,29 @@
 import * as _0 from "./CW20Base.types";
 import * as _1 from "./CW20Base.client";
 import * as _2 from "./CW20Base.message-composer";
-import * as _3 from "./HopersStaking.types";
-import * as _4 from "./HopersStaking.client";
-import * as _5 from "./HopersStaking.message-composer";
-import * as _6 from "./HopersSwapHopers.types";
-import * as _7 from "./HopersSwapHopers.client";
-import * as _8 from "./HopersSwapHopers.message-composer";
-import * as _9 from "./HopersSwapOthers.types";
-import * as _10 from "./HopersSwapOthers.client";
-import * as _11 from "./HopersSwapOthers.message-composer";
+import * as _3 from "./RotoStaking.types";
+import * as _4 from "./RotoStaking.client";
+import * as _5 from "./RotoStaking.message-composer";
+import * as _6 from "./RotoSwapRoto.types";
+import * as _7 from "./RotoSwapRoto.client";
+import * as _8 from "./RotoSwapRoto.message-composer";
+import * as _9 from "./RotoSwapOthers.types";
+import * as _10 from "./RotoSwapOthers.client";
+import * as _11 from "./RotoSwapOthers.message-composer";
 export namespace contracts {
   export const CW20Base = { ..._0,
     ..._1,
     ..._2
   };
-  export const HopersStaking = { ..._3,
+  export const RotoStaking = { ..._3,
     ..._4,
     ..._5
   };
-  export const HopersSwapHopers = { ..._6,
+  export const RotoSwapRoto = { ..._6,
     ..._7,
     ..._8
   };
-  export const HopersSwapOthers = { ..._9,
+  export const RotoSwapOthers = { ..._9,
     ..._10,
     ..._11
   };

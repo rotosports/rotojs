@@ -6,8 +6,8 @@
 
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
-import { Uint128, Decimal, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./HopersSwapHopers.types";
-export interface HopersSwapHopersReadOnlyInterface {
+import { Uint128, Decimal, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./RotoSwapRoto.types";
+export interface RotoSwapRotoReadOnlyInterface {
   contractAddress: string;
   balance: ({
     address
@@ -27,7 +27,7 @@ export interface HopersSwapHopersReadOnlyInterface {
   }) => Promise<Token2ForToken1PriceResponse>;
   fee: () => Promise<FeeResponse>;
 }
-export class HopersSwapHopersQueryClient implements HopersSwapHopersReadOnlyInterface {
+export class RotoSwapRotoQueryClient implements RotoSwapRotoReadOnlyInterface {
   client: CosmWasmClient;
   contractAddress: string;
 
@@ -85,7 +85,7 @@ export class HopersSwapHopersQueryClient implements HopersSwapHopersReadOnlyInte
     });
   };
 }
-export interface HopersSwapHopersInterface extends HopersSwapHopersReadOnlyInterface {
+export interface RotoSwapRotoInterface extends RotoSwapRotoReadOnlyInterface {
   contractAddress: string;
   sender: string;
   addLiquidity: ({
@@ -161,7 +161,7 @@ export interface HopersSwapHopersInterface extends HopersSwapHopersReadOnlyInter
     owner?: string;
   }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
 }
-export class HopersSwapHopersClient extends HopersSwapHopersQueryClient implements HopersSwapHopersInterface {
+export class RotoSwapRotoClient extends RotoSwapRotoQueryClient implements RotoSwapRotoInterface {
   client: SigningCosmWasmClient;
   sender: string;
   contractAddress: string;

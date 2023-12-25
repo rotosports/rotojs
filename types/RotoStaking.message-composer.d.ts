@@ -5,8 +5,8 @@
 */
 import { Coin } from "@cosmjs/amino";
 import { MsgExecuteContractEncodeObject } from "cosmwasm";
-import { Uint128, Denom, Binary } from "./HopersStaking.types";
-export interface HopersStakingMessage {
+import { Uint128, Denom, Binary } from "./RotoStaking.types";
+export interface RotoStakingMessage {
     contractAddress: string;
     sender: string;
     receive: ({ amount, msg, sender }: {
@@ -36,7 +36,7 @@ export interface HopersStakingMessage {
         lockDuration: number;
     }, funds?: Coin[]) => MsgExecuteContractEncodeObject;
 }
-export declare class HopersStakingMessageComposer implements HopersStakingMessage {
+export declare class RotoStakingMessageComposer implements RotoStakingMessage {
     sender: string;
     contractAddress: string;
     constructor(sender: string, contractAddress: string);

@@ -8,8 +8,8 @@ import { Coin } from "@cosmjs/amino";
 import { MsgExecuteContractEncodeObject } from "cosmwasm";
 import { MsgExecuteContract } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { toUtf8 } from "@cosmjs/encoding";
-import { Uint128, Denom, Addr, InstantiateMsg, ExecuteMsg, Binary, Cw20ReceiveMsg, QueryMsg, Decimal, StakersListResponse, StakerInfo, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse, UnbondingInfo } from "./HopersStaking.types";
-export interface HopersStakingMessage {
+import { Uint128, Denom, Addr, InstantiateMsg, ExecuteMsg, Binary, Cw20ReceiveMsg, QueryMsg, Decimal, StakersListResponse, StakerInfo, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse, UnbondingInfo } from "./RotoStaking.types";
+export interface RotoStakingMessage {
   contractAddress: string;
   sender: string;
   receive: ({
@@ -56,7 +56,7 @@ export interface HopersStakingMessage {
     lockDuration: number;
   }, funds?: Coin[]) => MsgExecuteContractEncodeObject;
 }
-export class HopersStakingMessageComposer implements HopersStakingMessage {
+export class RotoStakingMessageComposer implements RotoStakingMessage {
   sender: string;
   contractAddress: string;
 

@@ -5,8 +5,8 @@
 */
 import { Coin } from "@cosmjs/amino";
 import { MsgExecuteContractEncodeObject } from "cosmwasm";
-import { Uint128, WalletInfo, Expiration, TokenSelect } from "./HopersSwapOthers.types";
-export interface HopersSwapOthersMessage {
+import { Uint128, WalletInfo, Expiration, TokenSelect } from "./RotoSwapOthers.types";
+export interface RotoSwapOthersMessage {
     contractAddress: string;
     sender: string;
     addLiquidity: ({ expiration, maxToken2, minLiquidity, token1Amount }: {
@@ -48,7 +48,7 @@ export interface HopersSwapOthersMessage {
         owner?: string;
     }, funds?: Coin[]) => MsgExecuteContractEncodeObject;
 }
-export declare class HopersSwapOthersMessageComposer implements HopersSwapOthersMessage {
+export declare class RotoSwapOthersMessageComposer implements RotoSwapOthersMessage {
     sender: string;
     contractAddress: string;
     constructor(sender: string, contractAddress: string);

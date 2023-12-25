@@ -117,4 +117,4 @@ export interface UnbondingInfo {
     time: number;
     [k: string]: unknown;
 }
-export type HopersStakingExecuteMsg = ExecuteMsg;
+export type RotoStakingExecuteMsg = ExecuteMsg;

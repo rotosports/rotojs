@@ -8,8 +8,8 @@ import { Coin } from "@cosmjs/amino";
 import { MsgExecuteContractEncodeObject } from "cosmwasm";
 import { MsgExecuteContract } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { toUtf8 } from "@cosmjs/encoding";
-import { Uint128, Decimal, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./HopersSwapHopers.types";
-export interface HopersSwapHopersMessage {
+import { Uint128, Decimal, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./RotoSwapRoto.types";
+export interface RotoSwapRotoMessage {
   contractAddress: string;
   sender: string;
   addLiquidity: ({
@@ -85,7 +85,7 @@ export interface HopersSwapHopersMessage {
     owner?: string;
   }, funds?: Coin[]) => MsgExecuteContractEncodeObject;
 }
-export class HopersSwapHopersMessageComposer implements HopersSwapHopersMessage {
+export class RotoSwapRotoMessageComposer implements RotoSwapRotoMessage {
   sender: string;
   contractAddress: string;
 

@@ -1,5 +1,5 @@
 {
-  "contract_name": "hopers_swap_hopers",
+  "contract_name": "roto_swap_roto",
   "contract_version": "1.1.2-beta",
   "idl_version": "1.0.0",
   "instantiate": {

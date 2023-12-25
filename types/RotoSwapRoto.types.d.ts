@@ -3,8 +3,8 @@
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the @cosmwasm/ts-codegen generate command to regenerate this file.
 */
-export type Decimal = string;
 export type Uint128 = string;
+export type Decimal = string;
 export type Denom = {
     native: string;
 } | {
@@ -12,6 +12,7 @@ export type Denom = {
 };
 export type Addr = string;
 export interface InstantiateMsg {
+    burn_fee_percent_numerator: Uint128;
     dev_wallet_lists: WalletInfo[];
     fee_percent_denominator: Uint128;
     fee_percent_numerator: Uint128;
@@ -65,6 +66,7 @@ export type ExecuteMsg = {
     };
 } | {
     update_config: {
+        burn_fee_percent_numerator: Uint128;
         dev_wallet_lists: WalletInfo[];
         fee_percent_denominator: Uint128;
         fee_percent_numerator: Uint128;
@@ -101,10 +103,10 @@ export type QueryMsg = {
     fee: {};
 };
 export interface MigrateMsg {
+    burn_fee_percent_numerator: Uint128;
 }
 export interface BalanceResponse {
     balance: Uint128;
-    [k: string]: unknown;
 }
 export interface FeeResponse {
     dev_wallet_lists: WalletInfo[];
@@ -125,4 +127,4 @@ export interface Token1ForToken2PriceResponse {
 export interface Token2ForToken1PriceResponse {
     token1_amount: Uint128;
 }
-export type HopersSwapOthersExecuteMsg = ExecuteMsg;
+export type RotoSwapRotoExecuteMsg = ExecuteMsg;

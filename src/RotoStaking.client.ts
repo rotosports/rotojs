@@ -6,8 +6,8 @@
 
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
-import { Uint128, Denom, Addr, InstantiateMsg, ExecuteMsg, Binary, Cw20ReceiveMsg, QueryMsg, Decimal, StakersListResponse, StakerInfo, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse, UnbondingInfo } from "./HopersStaking.types";
-export interface HopersStakingReadOnlyInterface {
+import { Uint128, Denom, Addr, InstantiateMsg, ExecuteMsg, Binary, Cw20ReceiveMsg, QueryMsg, Decimal, StakersListResponse, StakerInfo, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse, UnbondingInfo } from "./RotoStaking.types";
+export interface RotoStakingReadOnlyInterface {
   contractAddress: string;
   config: () => Promise<ConfigResponse>;
   state: ({
@@ -37,7 +37,7 @@ export interface HopersStakingReadOnlyInterface {
     startAfter?: number;
   }) => Promise<UnbondingInfoResponse>;
 }
-export class HopersStakingQueryClient implements HopersStakingReadOnlyInterface {
+export class RotoStakingQueryClient implements RotoStakingReadOnlyInterface {
   client: CosmWasmClient;
   contractAddress: string;
 
@@ -110,7 +110,7 @@ export class HopersStakingQueryClient implements HopersStakingReadOnlyInterface 
     });
   };
 }
-export interface HopersStakingInterface extends HopersStakingReadOnlyInterface {
+export interface RotoStakingInterface extends RotoStakingReadOnlyInterface {
   contractAddress: string;
   sender: string;
   receive: ({
@@ -157,7 +157,7 @@ export interface HopersStakingInterface extends HopersStakingReadOnlyInterface {
     lockDuration: number;
   }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
 }
-export class HopersStakingClient extends HopersStakingQueryClient implements HopersStakingInterface {
+export class RotoStakingClient extends RotoStakingQueryClient implements RotoStakingInterface {
   client: SigningCosmWasmClient;
   sender: string;
   contractAddress: string;

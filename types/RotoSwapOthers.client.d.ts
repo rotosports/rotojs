@@ -5,8 +5,8 @@
 */
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
-import { Uint128, WalletInfo, Expiration, TokenSelect, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./HopersSwapOthers.types";
-export interface HopersSwapOthersReadOnlyInterface {
+import { Uint128, WalletInfo, Expiration, TokenSelect, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./RotoSwapOthers.types";
+export interface RotoSwapOthersReadOnlyInterface {
     contractAddress: string;
     balance: ({ address }: {
         address: string;
@@ -20,7 +20,7 @@ export interface HopersSwapOthersReadOnlyInterface {
     }) => Promise<Token2ForToken1PriceResponse>;
     fee: () => Promise<FeeResponse>;
 }
-export declare class HopersSwapOthersQueryClient implements HopersSwapOthersReadOnlyInterface {
+export declare class RotoSwapOthersQueryClient implements RotoSwapOthersReadOnlyInterface {
     client: CosmWasmClient;
     contractAddress: string;
     constructor(client: CosmWasmClient, contractAddress: string);
@@ -36,7 +36,7 @@ export declare class HopersSwapOthersQueryClient implements HopersSwapOthersRead
     }) => Promise<Token2ForToken1PriceResponse>;
     fee: () => Promise<FeeResponse>;
 }
-export interface HopersSwapOthersInterface extends HopersSwapOthersReadOnlyInterface {
+export interface RotoSwapOthersInterface extends RotoSwapOthersReadOnlyInterface {
     contractAddress: string;
     sender: string;
     addLiquidity: ({ expiration, maxToken2, minLiquidity, token1Amount }: {
@@ -78,7 +78,7 @@ export interface HopersSwapOthersInterface extends HopersSwapOthersReadOnlyInter
         owner?: string;
     }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
 }
-export declare class HopersSwapOthersClient extends HopersSwapOthersQueryClient implements HopersSwapOthersInterface {
+export declare class RotoSwapOthersClient extends RotoSwapOthersQueryClient implements RotoSwapOthersInterface {
     client: SigningCosmWasmClient;
     sender: string;
     contractAddress: string;

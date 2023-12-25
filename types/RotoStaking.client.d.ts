@@ -5,8 +5,8 @@
 */
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
-import { Uint128, Denom, Binary, StakersListResponse, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse } from "./HopersStaking.types";
-export interface HopersStakingReadOnlyInterface {
+import { Uint128, Denom, Binary, StakersListResponse, ConfigResponse, StakerInfoResponse, StateResponse, UnbondingInfoResponse } from "./RotoStaking.types";
+export interface RotoStakingReadOnlyInterface {
     contractAddress: string;
     config: () => Promise<ConfigResponse>;
     state: ({ blockTime }: {
@@ -25,7 +25,7 @@ export interface HopersStakingReadOnlyInterface {
         startAfter?: number;
     }) => Promise<UnbondingInfoResponse>;
 }
-export declare class HopersStakingQueryClient implements HopersStakingReadOnlyInterface {
+export declare class RotoStakingQueryClient implements RotoStakingReadOnlyInterface {
     client: CosmWasmClient;
     contractAddress: string;
     constructor(client: CosmWasmClient, contractAddress: string);
@@ -46,7 +46,7 @@ export declare class HopersStakingQueryClient implements HopersStakingReadOnlyIn
         startAfter?: number;
     }) => Promise<UnbondingInfoResponse>;
 }
-export interface HopersStakingInterface extends HopersStakingReadOnlyInterface {
+export interface RotoStakingInterface extends RotoStakingReadOnlyInterface {
     contractAddress: string;
     sender: string;
     receive: ({ amount, msg, sender }: {
@@ -76,7 +76,7 @@ export interface HopersStakingInterface extends HopersStakingReadOnlyInterface {
         lockDuration: number;
     }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
 }
-export declare class HopersStakingClient extends HopersStakingQueryClient implements HopersStakingInterface {
+export declare class RotoStakingClient extends RotoStakingQueryClient implements RotoStakingInterface {
     client: SigningCosmWasmClient;
     sender: string;
     contractAddress: string;

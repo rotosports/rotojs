@@ -5,31 +5,31 @@
 */
 import * as _1 from "./CW20Base.client";
 import * as _2 from "./CW20Base.message-composer";
-import * as _4 from "./HopersStaking.client";
-import * as _5 from "./HopersStaking.message-composer";
-import * as _7 from "./HopersSwapHopers.client";
-import * as _8 from "./HopersSwapHopers.message-composer";
-import * as _10 from "./HopersSwapOthers.client";
-import * as _11 from "./HopersSwapOthers.message-composer";
+import * as _4 from "./RotoStaking.client";
+import * as _5 from "./RotoStaking.message-composer";
+import * as _7 from "./RotoSwapRoto.client";
+import * as _8 from "./RotoSwapRoto.message-composer";
+import * as _10 from "./RotoSwapOthers.client";
+import * as _11 from "./RotoSwapOthers.message-composer";
 export declare namespace contracts {
     const CW20Base: {
         CW20BaseMessageComposer: typeof _2.CW20BaseMessageComposer;
         CW20BaseQueryClient: typeof _1.CW20BaseQueryClient;
         CW20BaseClient: typeof _1.CW20BaseClient;
     };
-    const HopersStaking: {
-        HopersStakingMessageComposer: typeof _5.HopersStakingMessageComposer;
-        HopersStakingQueryClient: typeof _4.HopersStakingQueryClient;
-        HopersStakingClient: typeof _4.HopersStakingClient;
+    const RotoStaking: {
+        RotoStakingMessageComposer: typeof _5.RotoStakingMessageComposer;
+        RotoStakingQueryClient: typeof _4.RotoStakingQueryClient;
+        RotoStakingClient: typeof _4.RotoStakingClient;
     };
-    const HopersSwapHopers: {
-        HopersSwapHopersMessageComposer: typeof _8.HopersSwapHopersMessageComposer;
-        HopersSwapHopersQueryClient: typeof _7.HopersSwapHopersQueryClient;
-        HopersSwapHopersClient: typeof _7.HopersSwapHopersClient;
+    const RotoSwapRoto: {
+        RotoSwapRotoMessageComposer: typeof _8.RotoSwapRotoMessageComposer;
+        RotoSwapRotoQueryClient: typeof _7.RotoSwapRotoQueryClient;
+        RotoSwapRotoClient: typeof _7.RotoSwapRotoClient;
     };
-    const HopersSwapOthers: {
-        HopersSwapOthersMessageComposer: typeof _11.HopersSwapOthersMessageComposer;
-        HopersSwapOthersQueryClient: typeof _10.HopersSwapOthersQueryClient;
-        HopersSwapOthersClient: typeof _10.HopersSwapOthersClient;
+    const RotoSwapOthers: {
+        RotoSwapOthersMessageComposer: typeof _11.RotoSwapOthersMessageComposer;
+        RotoSwapOthersQueryClient: typeof _10.RotoSwapOthersQueryClient;
+        RotoSwapOthersClient: typeof _10.RotoSwapOthersClient;
     };
 }

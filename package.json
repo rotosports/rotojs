@@ -1,11 +1,12 @@
 {
-	"name": "@hopersio/contracts",
+	"name": "@sudophunk/contracts",
 	"version": "0.1.4",
-	"description": "Hopers.io contracts frontend library",
+	"description": "Roto contracts frontend library",
 	"author": "Marius Modlich <marius@digitalkitchen.zone>",
-	"repository": "https://github.com/HopersNFT/hopersjs",
-	"homepage": "https://hopers.io",
+	"repository": "https://github.com/RotoNFT/rotojs",
+	"homepage": "https://roto.io",
 	"license": "SEE LICENSE IN LICENSE",
+	"access": "public"
 	"main": "main/index.js",
 	"typings": "types/index.d.ts",
 	"directories": {

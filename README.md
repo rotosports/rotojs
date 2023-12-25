@@ -1,39 +1,39 @@
-# @hopersio/contracts
+# @rotoio/contracts
 
-Hopers.io smart contract interface.
+Roto.io smart contract interface.
 
 ```sh
-yarn add @hopersio/contracts
+yarn add @rotoio/contracts
 ```
 
-## Hopers.io Contracts
+## Roto.io Contracts
 
 ### Clients
 
 All contracts are scoped under the `contracts` object:
 
 ```js
-import { contracts } from "@hopersio/contracts"
-const { CW20Base, HopersStaking, HopersSwapHopers, HopersSwapOthers } = contracts
+import { contracts } from "@rotoio/contracts"
+const { CW20Base, RotoStaking, RotoSwapRoto, RotoSwapOthers } = contracts
 ```
 
-Then each contract will have clients, for example for `HopersStaking`:
+Then each contract will have clients, for example for `RotoStaking`:
 
 ```ts
-const { HopersStakingClient, HopersStakingMessageComposer, HopersStakingQueryClient } =
-	HopersStaking
+const { RotoStakingClient, RotoStakingMessageComposer, RotoStakingQueryClient } =
+	RotoStaking
 ```
 
 ### Queries
 
 ```js
-const queryClient = new HopersStakingQueryClient(wasmClient, contractAddress)
+const queryClient = new RotoStakingQueryClient(wasmClient, contractAddress)
 ```
 
 ### Mutations
 
 ```js
-const client = new HopersStaking(signingWasmClient, sender, contractAddress)
+const client = new RotoStaking(signingWasmClient, sender, contractAddress)
 await client.stake(msg)
 ```
 

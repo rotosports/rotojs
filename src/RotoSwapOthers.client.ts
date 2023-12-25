@@ -6,8 +6,8 @@
 
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
-import { Decimal, Uint128, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./HopersSwapOthers.types";
-export interface HopersSwapOthersReadOnlyInterface {
+import { Decimal, Uint128, Denom, Addr, InstantiateMsg, WalletInfo, ExecuteMsg, Expiration, Timestamp, Uint64, TokenSelect, QueryMsg, MigrateMsg, BalanceResponse, FeeResponse, InfoResponse, Token1ForToken2PriceResponse, Token2ForToken1PriceResponse } from "./RotoSwapOthers.types";
+export interface RotoSwapOthersReadOnlyInterface {
   contractAddress: string;
   balance: ({
     address
@@ -27,7 +27,7 @@ export interface HopersSwapOthersReadOnlyInterface {
   }) => Promise<Token2ForToken1PriceResponse>;
   fee: () => Promise<FeeResponse>;
 }
-export class HopersSwapOthersQueryClient implements HopersSwapOthersReadOnlyInterface {
+export class RotoSwapOthersQueryClient implements RotoSwapOthersReadOnlyInterface {
   client: CosmWasmClient;
   contractAddress: string;
 
@@ -85,7 +85,7 @@ export class HopersSwapOthersQueryClient implements HopersSwapOthersReadOnlyInte
     });
   };
 }
-export interface HopersSwapOthersInterface extends HopersSwapOthersReadOnlyInterface {
+export interface RotoSwapOthersInterface extends RotoSwapOthersReadOnlyInterface {
   contractAddress: string;
   sender: string;
   addLiquidity: ({
@@ -159,7 +159,7 @@ export interface HopersSwapOthersInterface extends HopersSwapOthersReadOnlyInter
     owner?: string;
   }, fee?: number | StdFee | "auto", memo?: string, funds?: Coin[]) => Promise<ExecuteResult>;
 }
-export class HopersSwapOthersClient extends HopersSwapOthersQueryClient implements HopersSwapOthersInterface {
+export class RotoSwapOthersClient extends RotoSwapOthersQueryClient implements RotoSwapOthersInterface {
   client: SigningCosmWasmClient;
   sender: string;
   contractAddress: string;
